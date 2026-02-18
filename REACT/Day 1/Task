@@ -1,0 +1,145 @@
+// 1. What is JavaScript?
+// JavaScript is a high-level, interpreted programming language mainly used to make web pages interactive and dynamic.
+// It can calculate, manipulate and validate data.
+// It can update and change both HTML and CSS.
+// It is the only programming language supported by all browsers
+// Used for frontend, backend, mobile apps, and desktop apps
+
+// 2. What are variables?
+// Variables are named references that point to values stored in memory.
+// JavaScript variables are containers for data.
+
+// JavaScript variables can be declared in 4 ways:
+
+// Modern JavaScript         
+// Using let
+// Using const
+
+// Older JavaScript
+// Using var (Not Recommended)
+// Automatically (Not Recommended)
+
+// 3. Difference between var, let, const?
+
+// Var
+// Function-scoped (not block-scoped)
+// Can be re-declared
+// Can be re-assigned
+// Hoisted and initialized with undefined
+// Can cause bugs, so not recommended
+
+
+//  Let
+// Block-scoped {}
+// Cannot be re-declared in same scope
+// Can be re-assigned
+// Hoisted but not initialized (Temporal Dead Zone)
+// Preferred over var
+
+// const
+// Block-scoped
+// Cannot be re-declared
+// Cannot be re-assigned
+// Hoisted but not initialized (Temporal Dead Zone)
+// Must be initialized at declaration
+// Best practice by default
+
+
+// 4. What is datatype?
+// Data types define the kind of value stored in a variable.
+// JavaScript uses types to determine how a value behaves and what operations can be performed on it.
+
+// Determines storage & operations
+// Helps prevent errors
+// Two categories: Primitive & Reference
+
+// 5.Types of primitive datatypes?
+// JavaScript has 7 primitive data types:
+// Number, String, Boolean, Undefined, Null, BigInt, and Symbol.
+
+
+// 6.What are non-primitive datatypes?
+// Non-primitive data types (also called reference types) are data types that can store multiple values or complex structures.
+
+// They are:
+// Mutable (can be changed)
+// Stored by reference (memory address)
+// Stored in heap memory
+
+// In JavaScript, the main non-primitive types are:
+// Object
+// Array
+// Function
+
+// 7.What Are Operators?
+// Operators are special symbols used to perform operations on values (operands).
+
+// 8.Types of operators?
+
+// Arithmetic → + - * / %
+// Assignment → = += -=
+// Comparison → == === > <
+// Logical → && || !
+// Unary → ++ -- typeof
+// Ternary → ?:
+// Bitwise → & | ^
+// Type → typeof instanceof
+
+// 9.What is expression?
+// An expression is a combination of values, variables, and operators that produces a value.
+//  Every expression returns a value.
+ 
+//  x + 5
+
+
+//  10.What is statement?
+// A statement is a complete instruction that tells JavaScript to perform an action.
+// Statements do not necessarily return a value.
+
+// let x = 10;
+
+// 11.What is control statement?
+
+// A control statement is a statement that controls the flow of execution in a program.
+
+// It decides:
+// Which code runs
+// How many times it runs
+// When to stop running
+
+
+// Type	            Example
+// Conditional	        if, if else, else if, switch
+// Looping	            for, while , do while
+// Jump	            break, continue, return
+
+// 12. What are conditional statements?
+// Conditional statements are used to make decisions in a program.
+// they execute certain code only if a condition is true.
+
+// Conditional	statements  :   if, if else, else if, switch
+
+// 13. What are looping statements?
+// Looping statements are used to execute a block of code repeatedly as long as a given condition is true.
+
+// Looping	statements     :   for, while , do while
+
+// 14. What is hoisting?
+// Hoisting is JavaScript’s default behavior of moving declarations to the top of their scope before execution.
+// Only declarations are hoisted, Initializations are NOT hoisted.
+
+
+// Scope determines where a variable or function can be accessed or used in a program.
+
+// Global Scope
+// A variable declared outside any function or block has global scope.
+
+// Function Scope
+// A variable declared inside a function is accessible only inside that function.
+
+// Block Scope
+// A variable declared inside { } using let or const.
+
+// 16. What is closure?
+// A closure is created when a function remembers and can access variables from its outer (parent) scope, even after the outer function has finished executing.
+// A closure is a function that “remembers” its parent’s variables.
