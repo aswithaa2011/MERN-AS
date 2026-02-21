@@ -33,14 +33,14 @@
 // Block-scoped {}
 // Cannot be re-declared in same scope
 // Can be re-assigned
-// Hoisted but not initialized (Temporal Dead Zone)
+// Hoisted but not initialized 
 // Preferred over var
 
 // const
 // Block-scoped
 // Cannot be re-declared
 // Cannot be re-assigned
-// Hoisted but not initialized (Temporal Dead Zone)
+// Hoisted but not initialized 
 // Must be initialized at declaration
 // Best practice by default
 
@@ -64,7 +64,6 @@
 // They are:
 // Mutable (can be changed)
 // Stored by reference (memory address)
-// Stored in heap memory
 
 // In JavaScript, the main non-primitive types are:
 // Object
@@ -76,14 +75,14 @@
 
 // 8.Types of operators?
 
-// Arithmetic → + - * / %
-// Assignment → = += -=
-// Comparison → == === > <
-// Logical → && || !
-// Unary → ++ -- typeof
-// Ternary → ?:
-// Bitwise → & | ^
-// Type → typeof instanceof
+// Arithmetic  + - * / %
+// Assignment = += -=
+// Comparison == === > <
+// Logical  && || !
+// Unary  ++ -- typeof
+// Ternary ?:
+// Bitwise  & | ^
+// Type typeof instanceof
 
 // 9.What is expression?
 // An expression is a combination of values, variables, and operators that produces a value.
@@ -128,7 +127,7 @@
 // Hoisting is JavaScript’s default behavior of moving declarations to the top of their scope before execution.
 // Only declarations are hoisted, Initializations are NOT hoisted.
 
-
+// 15. what is scope?
 // Scope determines where a variable or function can be accessed or used in a program.
 
 // Global Scope
