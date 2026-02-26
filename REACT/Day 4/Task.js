@@ -67,3 +67,5 @@ function checkValue(value){
 
 }
 console.log(checkValue(-0))
+
+
