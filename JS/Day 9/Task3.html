@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+</head>
+<body>
+
+<form id="myForm">
+    <label for="input">Enter Name:</label>
+    <input type="text" id="input">
+    <span id="err" ></span>
+    <br><br>
+    <button type="submit">Submit</button>
+</form>
+<script>
+
+const form = document.getElementById("myForm");
+const input = document.getElementById("input");
+const err = document.getElementById("err");
+
+form.addEventListener("submit",function(event){
+ event.preventDefault()
+
+ const value = input.value
+
+  if (value === "") {
+        err.innerText = "Please enter your name";
+    } else {
+        err.innerText = ""
+        alert("Form submitted successfully!");
+    }
+
+});
+
+</script>
+</body>
+</html>

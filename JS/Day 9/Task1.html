@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+
+        button{
+            width:100px;
+            height: 30px;
+            border-radius: 5px;
+            border-color: azure;
+            color: white;
+            font-size: 16px;
+
+        }
+
+        #increase-btn{
+            background-color: rgb(68, 202, 150);
+        }
+        #decrease-btn{
+            background-color: rgb(176, 52, 52);
+        }
+
+        #reset-btn{
+
+            background-color: rgb(20, 18, 18);
+        }
+    </style>
+</head>
+
+<body> <button id="increase-btn">increase</button> <button id="decrease-btn">decrease</button> <button
+        id="reset-btn">reset</button>
+    <p id="res"></p>
+    
+    
+
+    <script>
+
+
+  const res = document.getElementById('res') 
+let count = 0 
+
+res.textContent = count  
+
+const Increase = document.getElementById('increase-btn')
+Increase.addEventListener('click', () => {
+    count += 1;
+    res.textContent = count
+})
+
+const Decrease = document.getElementById('decrease-btn')
+Decrease.addEventListener('click', () => {
+    count -= 1;
+    res.textContent = count;
+})
+
+const Reset = document.getElementById('reset-btn')
+Reset.addEventListener('click', () => {
+    count = 0
+    res.textContent = count;
+})
+
+
+
+  
+         
+
+    </script>
+</body>
+
+</html>
