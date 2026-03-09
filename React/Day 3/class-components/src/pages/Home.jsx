@@ -11,7 +11,7 @@ class Home extends Component{
         <NavBar/>
   
 
-  <BannerImg/>
+   <BannerImg/> 
 
         </>
     )
