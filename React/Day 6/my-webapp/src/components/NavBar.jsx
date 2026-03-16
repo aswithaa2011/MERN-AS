@@ -7,7 +7,7 @@ import { PiSmileyMeltingLight } from "react-icons/pi";
 
 
 import { CiSearch } from "react-icons/ci";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 
 const NavBar = () => {
@@ -17,16 +17,16 @@ const NavBar = () => {
 <div>
 
 
-<div className="justify-around flex p-3  ">
-  <div className=" flex w-40 gap-3" > 
+<div className="justify-center items-center gap-30 flex p-3  ">
+  <div className=" flex mr-10 w-40 gap-3" > 
     <div><img src={logo1} alt="" /></div>
-    <div ><img src={logo2} alt="" /></div>
+    <div ><img className="h-8" src={logo2} alt="" /></div>
   </div>
 
    <div className=" flex gap-10">
 
     <div className="flex "> 
-       <TbMenuDeep />
+      
      <Link to="/">HOME</Link>
       </div>
    <Link to="/offers">OFFERS</Link>
@@ -34,11 +34,13 @@ const NavBar = () => {
  <Link to="/magazine">MAGAZINE</Link>
    <Link to="/about">ABOUT</Link>
 <Link to="/contact">CONTACT</Link>  
+
+
     
    </div>
 
 
-<div className="flex gap-3  ">
+<div className="flex gap-3 text-2xl ">
  
  <div><CiSearch /></div>
  <div><CiHeart /></div>
@@ -46,6 +48,8 @@ const NavBar = () => {
  <div><PiSmileyMeltingLight/></div>
  
  </div>
+
+ <NavLink to={"/Login"} className="rounded p-2 w-30 10 border-2 text-center  border-purple-700"> Login</NavLink>
 </div>
 
 </div>
