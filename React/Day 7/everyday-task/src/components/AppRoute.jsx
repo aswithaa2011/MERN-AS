@@ -1,24 +1,16 @@
-import { Routes,Route } from 'react-router-dom'
-import Task from '../pages/Task'
-import Layout from './Layout'
-import Login from '../Day16/Components/Login'
-import Dashboard from '../Day16/Components/Dashboard'
+import React from 'react'
+import { Route, Routes } from 'react-router-dom'
 
 const AppRoute = () => {
   return (
-    <>
+   <>
+   <Routes>
 
-<Routes >
-<Route element={<Layout/>}>
-<Route path="/task" element={<Task/>} />
-</Route>
+    <Route to="/products/1" > </Route>
+        <Route to="/products/2" > </Route>
 
-
-
-</Routes>
-
-
-    </>
+   </Routes>
+   </>
   )
 }
 
