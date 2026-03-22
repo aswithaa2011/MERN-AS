@@ -35,18 +35,34 @@ useEffect(()=>{
     })();
 },[])
 
-  const filteredData = data.filter((e) => {
-    if (filter !== "classic") return true
+const filteredData=data.filter((e)=>{
 
-    const name = e.name.toLowerCase()
-    const word = "classic"
 
-    for (let i = 0; i < word.length; i++) {
-      if (name[i] !== word[i]) return false
+    if(filter!=='classic') return true
+
+    const name=e.name.toLowerCase()
+    const word="classic"
+
+    for(let i=0;i<word.length;i++){
+        if(name[i]!==word[i])
+
+            return false
     }
-
     return true
-  })
+})
+
+//   const filteredData = data.filter((e) => {
+//     if (filter !== "classic") return true
+
+//     const name = e.name.toLowerCase()
+//     const word = "classic"
+
+//     for (let i = 0; i < word.length; i++) {
+//       if (name[i] !== word[i]) return false
+//     }
+
+//     return true
+//   })
 
 
 
