@@ -1,30 +1,23 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const Countdown = ({ passvote }) => {
-  const [timeLeft, setTimeLeft] = useState(60);
+  const [timeLeft, setTimeLeft] = useState(120);
   const navigate = useNavigate();
-  const timerRef = useRef(null); 
 
   useEffect(() => {
-    if (passvote === null) {
-      timerRef.current = setInterval(() => {
-        setTimeLeft((prev) => prev - 1);
-      }, 1000);
-    }
-    return () => clearInterval(timerRef.current);
-  }, [passvote]);
+    if (passvote !== null) return;
 
-  useEffect(() => {
+    const timer = setInterval(() => {
+      setTimeLeft((prev) => prev - 1);
+    }, 1000);
 
-    if (passvote !== null) {
-      clearInterval(timerRef.current);
-    }
+    return () => clearInterval(timer);
+
   }, [passvote]);
 
   useEffect(() => {
     if (timeLeft <= 0 && passvote === null) {
-      clearInterval(timerRef.current); 
       alert("⏰ Time Up! Redirecting to login...");
       navigate("/login");
     }

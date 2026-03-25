@@ -126,9 +126,12 @@ const VOTECLICK = (name) => {
 </button>
 
 
+
       </div>
     ))}
   </div>
+
+  
 </div>
   );
 };
