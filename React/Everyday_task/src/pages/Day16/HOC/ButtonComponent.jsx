@@ -1,5 +1,5 @@
 
-const ButtonComponent = ({ handleClick }) => {
+const Buttoncomponent = ({ handleClick }) => {
   return (
     <div className="flex justify-center items-center min-h-screen">
       <button
@@ -12,4 +12,4 @@ const ButtonComponent = ({ handleClick }) => {
   );
 };
 
-export default ButtonComponent;
+export default Buttoncomponent;
