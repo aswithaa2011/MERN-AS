@@ -1,6 +1,6 @@
-import Buttoncomponent from "./Buttoncomponent";
+import ButtonComponent from "./ButtonComponent";
 import withClickHandler from "./withClickHandler"
 
-const EnhancedComponent=withClickHandler(Buttoncomponent);
+const EnhancedComponent=withClickHandler(ButtonComponent);
 
 export default EnhancedComponent;
