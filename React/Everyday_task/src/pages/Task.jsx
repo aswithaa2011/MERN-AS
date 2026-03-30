@@ -11,7 +11,7 @@ const Task = () => {
         Your Tasks 📚
       </h1>
 
-      <div className="grid md:grid-cols-2 gap-8">
+      <div className="grid md:grid-cols-2 gap-10 ">
 
         {/* Day 10 */}
         <div className="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
@@ -117,14 +117,23 @@ const Task = () => {
         
         {/* Day 16*/}
         <div className="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
-          <h2 className="font-bold text-lg mb-4 text-lime-500">HOC</h2>
+          <h2 className="font-bold text-lg mb-4 text-lime-500">HOC & localStorage </h2>
           <button 
             onClick={() => navigate("/day16task1")} 
             className="bg-lime-500 text-white px-4 py-2 rounded-xl shadow hover:bg-lime-600 hover:scale-105 transition duration-200"
           >
           Login Form
           </button>
+
+           <button 
+            onClick={() => navigate("/day16task2")} 
+            className="bg-lime-500 text-white px-4 py-2 rounded-xl shadow hover:bg-lime-600 hover:scale-105 transition duration-200"
+          >
+          Alert using 
+          </button>
+          
         </div>
+          
 
       </div>
 
