@@ -1,37 +1,57 @@
-import { Routes,Route } from "react-router-dom"
+import { Routes, Route } from "react-router-dom";
+
+import Layout from "./Layout";
 import Home from "../pages/Home";
 import Task from "../pages/Task";
-import Layout from "./Layout";
+
+// Day 10
 import Task1 from "../pages/Day10/Task1";
 import Task2 from "../pages/Day10/Task2";
+
+// Day 11
 import Timer from "../pages/Day11/Timer";
 import FetchApi from "../pages/Day11/FetchApi";
 import TodoList from "../pages/Day11/TodoList";
+
+// Day 13
+import CounterApp from "../pages/Day13/CounterApp";
+import Formhandling from "../pages/Day13/Formhandling";
+
+// Day 15
+import FeedbackForm from "../pages/Day15/FeedbackForm";
+import SearchForm from "../pages/Day15/SearchForm";
+
+// Day 16
+import LoginForm from "../pages/Day16/LoginForm";
+import LoginRegister from "../pages/Day16/LoginRegister";
 
 const AppRoutes = () => {
   return (
     <Routes>
 
-
-      <Route path="/" element={<Layout/>}>
-        <Route path="/" element={<Home />} />
-        <Route path="/tasks" element={<Task />} />
-
-
-{/* day10 --tasks */}
-        <Route path="/day10task1" element={<Task1/>}/>
-           <Route path="day10task2" element={<Task2/>}/>
-
-  {/* day11 --tasks */}
-   <Route path="day11task1" element={<Timer />}/>   
-
-
+      <Route path="/" element={<Layout />}>
+        <Route index element={<Home />} />
+        <Route path="tasks" element={<Task />} />
       </Route>
-   <Route path="day11task2" element={<FetchApi/>} />     
 
+      <Route path="day10task1" element={<Task1 />} />
+      <Route path="day10task2" element={<Task2 />} />
 
-<Route path="day11task3" element={<TodoList/>}/>
+      <Route path="day11task1" element={<Timer />} />
+      <Route path="day11task2" element={<FetchApi />} />
+      <Route path="day11task3" element={<TodoList />} />
+
+      <Route path="day13task1" element={<CounterApp />} />
+      <Route path="day13task2" element={<Formhandling />} />
+
+      <Route path="day15task1" element={<FeedbackForm />} />
+      <Route path="day15task2" element={<SearchForm />} />
+
+      <Route path="day16task1" element={<LoginForm />} />
+      <Route path="loginpage" element={<LoginRegister />} />
+
     </Routes>
   );
 };
-  export default AppRoutes;
+
+export default AppRoutes;

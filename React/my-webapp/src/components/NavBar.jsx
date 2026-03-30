@@ -7,10 +7,21 @@ import { PiSmileyMeltingLight } from "react-icons/pi";
 
 
 import { CiSearch } from "react-icons/ci";
-import { Link, NavLink } from "react-router-dom";
+import { Link, Navigate, NavLink } from "react-router-dom";
+import { useContext } from "react";
+import AuthContext from "./Authentication/AuthContext";
+import { FaUserCircle } from "react-icons/fa";
 
 
 const NavBar = () => {
+
+
+ const {datas} = useContext(AuthContext)
+
+ console.log('hjghjg',datas);
+ 
+
+
   return (
  <>
  
@@ -48,8 +59,8 @@ const NavBar = () => {
  <div><PiSmileyMeltingLight/></div>
  
  </div>
-
- <NavLink to={"/Login"} className="rounded p-2 w-30 10 border-2 text-center  border-purple-700"> Login</NavLink>
+{datas.status?<FaUserCircle className="text-2xl" />:<NavLink to={"/Login"} className="rounded p-2 w-30 10 border-2 text-center  border-purple-700"> Login</NavLink>}
+ 
 </div>
 
 </div>
