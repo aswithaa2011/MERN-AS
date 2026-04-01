@@ -134,7 +134,33 @@ const Task = () => {
           
         </div>
           
+ <div className="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+          <h2 className="font-bold text-lg mb-4 text-yellow-300">Usememo </h2>
+          <button 
+            onClick={() => navigate("/day17task1")} 
+            className="bg-yellow-300 text-white px-4 py-2 rounded-xl shadow  hover:bg-yellow-300 hover:scale-105 transition duration-200"
+          >
+            usememo
+          </button>
 
+           
+        </div>
+
+
+          
+ <div className="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+          <h2 className="font-bold text-lg mb-4 text-yellow-300">Usememo </h2>
+          <button 
+            onClick={() => navigate("/day18task1")} 
+            className="bg-yellow-300 text-white px-4 py-2 rounded-xl shadow  hover:bg-yellow-300 hover:scale-105 transition duration-200"
+          >
+            Custom Hooks
+          </button>
+
+           
+        </div>
+
+   
       </div>
 
     </div>

@@ -1,7 +1,6 @@
 
 import { Routes, Route } from "react-router-dom";
 import Home from "../pages/Home";
-import Hooks from "../pages/Hooks";
 import LoginPage from "../pages/LoginPage";
 import Layout from "./Layout";
 import Otp from "../pages/Otp";
@@ -15,7 +14,6 @@ const AppRouter = () => {
       <Routes >
         <Route element={<Layout/>}>
         <Route path="/" element={<Home/>} />
-        <Route  path="/hooks" element={<Hooks /> } />
 
         </Route>
 

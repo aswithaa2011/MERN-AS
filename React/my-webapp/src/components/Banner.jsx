@@ -12,20 +12,22 @@ const BannerImg=[{image:img1},
 const Banner = () => {
   return (
   <>
-<div className='flex justify-center items-center gap-5 p-2 mt-10'>
-  {BannerImg.map((e,i)=>(
-    <div 
-      key={i}  
-      className='flex-1 rounded-xl overflow-hidden shadow-md'
-    > 
-      <img   
-        src={e.image} 
-        alt=""   
-        className="w-full h-[350px] object-cover"
-      />
-    </div>
-  ))}
-</div>
+ <div className='max-w-7xl mx-auto px-6 mt-10'>
+        <div className='flex gap-5'>
+          {BannerImg.map((e, i) => (
+            <div
+              key={i}
+              className='flex-1 rounded-xl overflow-hidden shadow-md'
+            >
+              <img
+                src={e.image}
+                alt=""
+                className="w-full h-[350px] object-cover"
+              />
+            </div>
+          ))}
+        </div>
+      </div>
   </>
   )
 }
