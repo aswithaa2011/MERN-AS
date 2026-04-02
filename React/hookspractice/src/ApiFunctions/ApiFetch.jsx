@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 const ApiFetch = () => {
 
     const [data,setData]=useState([])
+    const [search,setSearch]=useState("")
 
 const FetchData=async()=>{
  try{
@@ -37,9 +38,28 @@ console(err)
 FetchData()
  },[])
 
+
+
+
+ const handleChange=(e)=>{
+
+  setSearch(e.target.value)
+ }
+
+
+const filterdata=data.filter((e)=>e.title.toLowerCase().include(search.toLowerCase()))
+
+console.log(filterdata);
+
+
   return (
 <>
 
+
+<div className='bg-amber-200'>
+
+  <input type="text" placeholder='Search' className='w-50 m-3 bg-white ' onChange={handleChange} />
+</div>
 
 <div className='bg-gray-100 flex flex-wrap justify-center items-center gap-4 p-3' >
   {data.map((e) => (
@@ -49,6 +69,7 @@ FetchData()
       <p>{e.description}</p>
       <img src={e.thumbnail} alt={e.title} width="100" />
       <button className='bg-black rounded-2xl p-2 text-white'>view more</button>
+ 
     </div>
   ))}
 </div>

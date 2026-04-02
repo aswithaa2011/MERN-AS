@@ -26,6 +26,9 @@ import LoginForm from "../pages/Day16/LoginForm";
 import LoginRegister from "../pages/Day16/LoginRegister";
 import EnhancedComponent from "../pages/Day16/HOC/EnhancedComponent";
 import Calculationusememo from "../pages/Day17/Calculationusememo";
+import Showdata from "../pages/Day18/Showdata";
+import Arrayofnumbers from "../pages/Day17/Arrayofnumbers";
+import FilterSearch from "../pages/Day17/FilterSearch";
 
 const AppRoutes = () => {
   return (
@@ -56,7 +59,15 @@ const AppRoutes = () => {
 
 
             <Route path="day17task1" element={<Calculationusememo/>} />
-                        <Route path="day18task1" element={<showdata} />
+
+              <Route path="day17task2" element={<Arrayofnumbers/>} />
+
+                            <Route path="day17task3" element={<FilterSearch/>} />
+
+
+
+
+                        <Route path="day18task1" element={<Showdata/>} />
 
 
 
