@@ -168,14 +168,43 @@ const Task = () => {
 
         {/* Day 18 */}
         <div className="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
-          <h2 className="font-bold text-lg mb-4 text-yellow-400">Custom Hooks</h2>
+          <h2 className="font-bold text-lg mb-4 text-red-400">Custom Hooks</h2>
 
           <div className="flex flex-wrap gap-6 mt-2">
             <button 
               onClick={() => navigate("/day18task1")} 
-              className="bg-yellow-400 text-white px-5 py-2 rounded-xl shadow hover:bg-yellow-500 hover:scale-105 transition duration-200 min-w-[120px]"
+              className="bg-red-400 text-white px-5 py-2 rounded-xl shadow hover:bg-red-500 hover:scale-105 transition duration-200 min-w-[120px]"
             >
               Hooks
+            </button>
+          </div>
+        </div>
+
+
+   {/* Day 19 */}
+        <div className="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+          <h2 className="font-bold text-lg mb-4 text-black">CRUD</h2>
+
+          <div className="flex flex-wrap gap-6 mt-2">
+            <button 
+              onClick={() => navigate("/day19task1")} 
+              className="bg-black text-white px-5 py-2 rounded-xl shadow hover:bg-black hover:scale-105 transition duration-200 min-w-[120px]"
+            >
+              Task1
+            </button>
+          </div>
+        </div>
+
+         {/* Day 20 */}
+        <div className="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+          <h2 className="font-bold text-blue-800 text-lg mb-4 ">useReduce</h2>
+
+          <div className="flex flex-wrap gap-6 mt-2">
+            <button 
+              onClick={() => navigate("/day20task1")} 
+              className="bg-blue-800 text-white px-5 py-2 rounded-xl shadow hover:bg-blue-950 hover:scale-105 transition duration-200 min-w-[120px]"
+            >
+              TextChange
             </button>
           </div>
         </div>

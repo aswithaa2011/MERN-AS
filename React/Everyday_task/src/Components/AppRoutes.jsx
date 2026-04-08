@@ -29,6 +29,8 @@ import Calculationusememo from "../pages/Day17/Calculationusememo";
 import Showdata from "../pages/Day18/Showdata";
 import Arrayofnumbers from "../pages/Day17/Arrayofnumbers";
 import FilterSearch from "../pages/Day17/FilterSearch";
+import CRUD from "../pages/Day19/CRUD";
+import ChangeText from "../pages/Day20/ChangeText";
 
 const AppRoutes = () => {
   return (
@@ -68,6 +70,11 @@ const AppRoutes = () => {
 
 
                         <Route path="day18task1" element={<Showdata/>} />
+                                                <Route path="day19task1" element={<CRUD/>} />
+
+                                             <Route path="day20task1" element={<ChangeText/>} />
+
+
 
 
 

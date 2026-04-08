@@ -5,10 +5,15 @@ import LoginPage from "../pages/LoginPage";
 import Layout from "./Layout";
 import Otp from "../pages/Otp";
 import ProtectedContext from "./Authentication/ProtectedContext";
+import CardsItems from "./CardsItems";
+import AdminLogin from "../AdminPages/AdminLogin";
+import AdminRegister from "../AdminPages/AdminRegister";
 
 
 
 const AppRouter = () => {
+
+  
   return (
     <>
       <Routes >
@@ -20,6 +25,12 @@ const AppRouter = () => {
 
         <Route path="/login" element={<LoginPage/>}></Route>
         <Route path="/otp" element={<ProtectedContext><Otp/></ProtectedContext>}></Route>
+
+        <Route path="/cart" element={<CardsItems/>}/>
+
+        <Route path="/admin/login" element={<AdminLogin/>}></Route>
+                <Route path="/admin/register" element={<AdminRegister/>}></Route>
+
       </Routes>
 
 
