@@ -1,16 +1,15 @@
-import React from 'react'
-import NavBar from '../components/NavBar'
-import Cards from '../components/Cards'
-import Banner from '../components/Banner'
+import Banner from "../components/Layouts/Banner";
+import Cards from "../components/Cart/Cards";
+import Footer from "../components/Layouts/Footer";
 
 const Home = () => {
   return (
-  <>
-  <Banner/>
-  <Cards/>
-  
-  </>
-  )
-}
+    <>
+      <Banner />
+      <Cards />
+      <Footer />
+    </>
+  );
+};
 
-export default Home
+export default Home;

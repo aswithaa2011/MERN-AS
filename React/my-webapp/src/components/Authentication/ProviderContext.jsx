@@ -9,7 +9,7 @@ const getData = () => {
   const dataget = localStorage.getItem("auth");
 
   if (!dataget) {
-    setDatas({ status: false }); // ✅ default
+    setDatas({ status: false }); 
     return;
   }
 

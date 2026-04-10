@@ -1,19 +1,7 @@
-
-import AppRouter from './components/AppRouter'
-import NavBar from './components/NavBar'
-import Home from './pages/Home'
-
+import AppRouter from "./components/Routes/AppRouter";
 
 const App = () => {
-  return (
-   <>
+  return <AppRouter />;
+};
 
-   
-     <AppRouter/>
- 
-
-   </>
-  )
-}
-
-export default App
+export default App;

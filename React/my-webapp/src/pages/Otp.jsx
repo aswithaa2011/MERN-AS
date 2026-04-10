@@ -46,6 +46,7 @@ const [value,setValue]=useState("")
             const authData = { status: true };
             localStorage.setItem("auth", JSON.stringify(authData));
             setDatas(authData);
+            alert("successfully logged in")
             navigate("/")
 
           }
