@@ -1,3 +1,4 @@
+// src/components/Cart/CardContext.jsx
 import { createContext, useEffect, useState } from "react";
 
 const CardContext = createContext();
@@ -7,6 +8,7 @@ export const CardProvider = ({ children }) => {
     const savedCart = localStorage.getItem("cartItems");
     return savedCart ? JSON.parse(savedCart) : [];
   });
+  const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
     localStorage.setItem("cartItems", JSON.stringify(cartItems));
@@ -29,7 +31,9 @@ export const CardProvider = ({ children }) => {
   };
 
   return (
-    <CardContext.Provider value={{ cartItems, setCartItems, addToCart }}>
+    <CardContext.Provider
+      value={{ cartItems, setCartItems, addToCart, searchTerm, setSearchTerm }}
+    >
       {children}
     </CardContext.Provider>
   );

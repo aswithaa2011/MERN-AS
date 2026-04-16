@@ -7,12 +7,14 @@ import ProtectedContext from "../Authentication/ProtectedContext";
 import CardsItems from "../Cart/CardsItems";
 import AdminLogin from "../../pages/AdminPages/AdminLogin";
 import AdminRegister from "../../pages/AdminPages/AdminRegister";
+import Contact from "../../pages/Contact";
 
 const AppRouter = () => {
   return (
     <Routes>
       <Route element={<Layout />}>
         <Route path="/" element={<Home />} />
+        <Route path="/contact" element={<Contact />} />
       </Route>
 
       <Route path="/login" element={<LoginPage />} />
