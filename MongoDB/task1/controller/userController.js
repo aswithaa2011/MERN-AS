@@ -30,24 +30,47 @@ export const createData=async(req,res)=>{
 
 }
 
-export const getData=async(req,res)=>{
 
 
-    try{
 
-      const fetchdata=
+export const getDataByParams = async(req,res)=>{
+
+
+try{
 
     
-        
-    }
-    catch(e){
- console.log("error" ,e);
+    const {studentid}=req.params
 
- res.status(500).json({msg:"error occured"})
- 
-
-    }
+    const getData=await userModel.findById(studentid)
 
 
+    res.status(200).json({getData})
+
+        console.log(getData)
 
 }
+catch(e){
+
+    res.status(500).json({error:"something error"})
+}
+
+
+    
+
+
+    
+
+   
+}
+
+
+   
+
+   
+
+
+
+
+
+
+
