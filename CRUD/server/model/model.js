@@ -7,6 +7,7 @@ const userSchema=new mongoose.Schema({
 name:String,
 mobile:Number,
 email:String,
+password:String,
 createdby:{type:String,default:"admin"},
 updateddby:{type:String,default:"admin"},
 
