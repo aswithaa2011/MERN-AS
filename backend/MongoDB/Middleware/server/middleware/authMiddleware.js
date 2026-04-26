@@ -63,3 +63,27 @@ export const ValidateById=async(req,res,next)=>{
 next()
 
 }
+
+
+
+
+
+// what is middleware??
+// In Express.js, middleware is a function that runs between request and response.
+// It checks, modifies, or controls the request before it reaches the main controller.
+
+// Client Request → Middleware → Controller → Response
+
+// Why We Use Middleware
+
+// Because we want to:
+
+// Validate data
+// Check authentication
+// Verify token (JWT)
+// Handle errors
+// Log requests
+// Check permissions
+// Reuse common logic
+
+// instead of writing the same code again and again inside controllers.
