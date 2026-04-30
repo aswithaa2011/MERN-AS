@@ -20,17 +20,18 @@ const Register = () => {
     e.preventDefault();
 
     try {
-      const sendData = await axios.post("http://localhost:5000/api/create/Login", formData);
+      const sendData = await axios.post("http://localhost:5000/api/create/login", formData);
       alert(sendData.data.msg);
       setFormData({userPassword: "",userEmail: ""})
-      console.log(sendData.data.token);
+      console.log("Token", sendData.data.token);
       
       localStorage.setItem("jwToken",sendData.data.token)
+
       navigate("/dashboard")
 
     } 
     catch (error) {
-      alert(error.response.data.msg);
+      alert(error.response?.data?.msg);
     }
   };
   return (

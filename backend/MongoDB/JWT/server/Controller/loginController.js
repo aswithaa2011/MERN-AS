@@ -51,3 +51,13 @@ const token=await jwt.sign({id:checkemail._id,email:checkemail.userEmail},proces
     res.status(500).json({ msg: "something error" });
   }
 };
+
+
+export const getDashboardData=async(req,res)=>{
+  try{
+    res.status(200).json({users:req.users})
+  }
+  catch(error){
+    res.status(404).json({msg:error})
+  }
+}
