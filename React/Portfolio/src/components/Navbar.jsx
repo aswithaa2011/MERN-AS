@@ -8,7 +8,6 @@ export default function Navbar() {
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-      <a href="Aswitha_Resume.pdf" target="_blank" rel="noreferrer" className="nav-cta">Resume ↗</a>
     </nav>
   );
 }
