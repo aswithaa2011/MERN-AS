@@ -1,4 +1,4 @@
-import resume from "../assets/Aswitha_Resume_FS.pdf";
+// import removed; using public folder asset
 export default function Contact() {
   return (
     <section id="contact">
@@ -52,13 +52,6 @@ export default function Contact() {
             <div className="avail-dot"></div>
             <div className="avail-text">Currently available for full-time & internship roles</div>
           </div>
-          <a href="../assets/Aswitha_Resume_FS.pdf" download="Aswitha_Resume_FS.pdf" className="resume-card">
-            <div className="resume-icon">📄</div>
-            <div>
-              <div className="resume-title">Download Resume</div>
-              <div className="resume-sub">Aswitha_Resume_FS.pdf · MERN Stack Developer · 2025</div>
-            </div>
-          </a>
           <div className="social-pair">
             <a href="https://github.com/aswithaa2011/" target="_blank" rel="noreferrer" className="social-card">
               <svg viewBox="0 0 24 24" fill="currentColor" style={{ width: '16px' }}>

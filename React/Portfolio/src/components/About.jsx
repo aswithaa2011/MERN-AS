@@ -39,10 +39,6 @@ export default function About() {
 
           <div className="about-stats fade d4">
             <div className="stat-card">
-              <span className="stat-num">4+</span>
-              <span className="stat-label">Projects</span>
-            </div>
-            <div className="stat-card">
               <span className="stat-num">MERN</span>
               <span className="stat-label">Full Stack</span>
             </div>
