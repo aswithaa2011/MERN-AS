@@ -1,148 +1,79 @@
-import { motion } from "framer-motion";
-import { Mail, Phone, MapPin, Send, Download } from "lucide-react";
-import { GithubIcon, LinkedinIcon } from "./Icons";
-
 export default function Contact() {
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: { opacity: 1, transition: { staggerChildren: 0.1 } },
-    exit: { opacity: 0, y: -20, transition: { duration: 0.3 } }
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
-  };
-
   return (
-    <motion.div
-      variants={containerVariants}
-      initial="hidden"
-      animate="visible"
-      exit="exit"
-      className="min-h-screen pt-32 pb-20 px-6 max-w-6xl mx-auto flex flex-col justify-center"
-    >
-      {/* Header */}
-      <div className="text-center mb-16">
-        <motion.div
-          variants={itemVariants}
-          className="inline-flex items-center justify-center p-4 bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-2xl mb-4 border border-purple-500/20"
-        >
-          <Send className="text-purple-400" size={32} />
-        </motion.div>
-
-        <motion.h2
-          variants={itemVariants}
-          className="text-4xl md:text-5xl font-bold mb-4"
-        >
-          Let's <span className="text-gradient">Connect</span>
-        </motion.h2>
-
-        <motion.p
-          variants={itemVariants}
-          className="text-gray-400 text-lg max-w-2xl mx-auto"
-        >
-          Currently open to internships and frontend developer opportunities.
-          Feel free to reach out if you have a project in mind or just want to say hi!
-        </motion.p>
-      </div>
-
-      <div className="grid md:grid-cols-2 gap-12">
-        {/* Contact Info */}
-        <motion.div variants={itemVariants} className="space-y-6">
-
-          {/* Phone */}
-          <div className="glass-panel p-6 rounded-2xl flex items-center gap-6">
-            <div className="p-4 bg-gray-800 rounded-xl">
-              <Phone className="text-gray-300" size={24} />
-            </div>
-            <div>
-              <p className="text-sm text-gray-400 uppercase">Phone</p>
-              <p className="text-xl font-semibold">7305197294</p>
-            </div>
-          </div>
-
-          {/* Email */}
-          <div className="glass-panel p-6 rounded-2xl flex items-center gap-6">
-            <div className="p-4 bg-gray-800 rounded-xl">
-              <Mail className="text-gray-300" size={24} />
-            </div>
-            <div>
-              <p className="text-sm text-gray-400 uppercase">Email</p>
-              <a
-                href="mailto:aswithavijayakumar1120@gmail.com"
-                className="text-lg font-semibold hover:text-blue-400"
-              >
-                aswithavijayakumar1120@gmail.com
-              </a>
-            </div>
-          </div>
-
-          {/* Location */}
-          <div className="glass-panel p-6 rounded-2xl flex items-center gap-6">
-            <div className="p-4 bg-gray-800 rounded-xl">
-              <MapPin className="text-gray-300" size={24} />
-            </div>
-            <div>
-              <p className="text-sm text-gray-400 uppercase">Location</p>
-              <p className="text-xl font-semibold text-gray-300">
-                Open to Relocation / Remote
-              </p>
-            </div>
-          </div>
-        </motion.div>
-
-        {/* Right Section */}
-        <motion.div
-          variants={itemVariants}
-          className="glass-card p-8 flex flex-col justify-between"
-        >
-          {/* Social */}
-          <div>
-            <h3 className="text-2xl font-bold mb-6">Social Profiles</h3>
-
-            <div className="space-y-4">
-              <a
-                href="https://github.com/aswithaa201"
-                target="_blank"
-                rel="noreferrer"
-                className="flex items-center gap-4 p-4 bg-gray-900 rounded-xl"
-              >
-                <GithubIcon size={24} />
-                <span className="font-semibold">GitHub Profile</span>
-              </a>
-
-              <a
-                href="https://www.linkedin.com/in/aswitha-v-76b5013aa"
-                target="_blank"
-                rel="noreferrer"
-                className="flex items-center gap-4 p-4 bg-gray-900 rounded-xl"
-              >
-                <LinkedinIcon size={24} />
-                <span className="font-semibold">LinkedIn Network</span>
-              </a>
-            </div>
-          </div>
-
-          {/* Resume Button */}
-          <div className="mt-10 pt-8 border-t border-gray-800">
-            <a
-              href="/Aswitha_Resume.pdf"
-              download="Aswitha_Resume.pdf"
-              target="_blank"
-              rel="noreferrer"
-              className="w-full py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold rounded-xl flex items-center justify-center gap-3 hover:shadow-lg"
-            >
-              <Download size={20} />
-              <span>Download Resume</span>
+    <section id="contact">
+      <div className="section-wrap">
+        <div className="fade">
+          <div className="section-pill">Contact</div>
+          <h2 className="contact-heading">Let's build<br/><em>something great.</em></h2>
+          <p className="contact-desc">Open to internships and full-time MERN stack roles. Have a project in mind or just want to connect? I'd love to hear from you.</p>
+          <div className="contact-items">
+            <a href="mailto:aswithavijayakumar1120@gmail.com" className="contact-item">
+              <div className="ci-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                  <polyline points="22,6 12,13 2,6"/>
+                </svg>
+              </div>
+              <div>
+                <div className="ci-label">Email</div>
+                <div className="ci-val">aswithavijayakumar1120@gmail.com</div>
+              </div>
+              <div className="ci-arrow">↗</div>
             </a>
-
-            <p className="text-center text-sm text-gray-500 mt-4">
-              Click to view or download resume
-            </p>
+            <a href="tel:7305197294" className="contact-item">
+              <div className="ci-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8 19.79 19.79 0 01.01 1.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/>
+                </svg>
+              </div>
+              <div>
+                <div className="ci-label">Phone</div>
+                <div className="ci-val">+91 73051 97294</div>
+              </div>
+              <div className="ci-arrow">↗</div>
+            </a>
+            <a href="https://www.linkedin.com/in/aswitha-v-76b5013aa/" target="_blank" rel="noreferrer" className="contact-item">
+              <div className="ci-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                </svg>
+              </div>
+              <div>
+                <div className="ci-label">LinkedIn</div>
+                <div className="ci-val">aswitha-v-76b5013aa</div>
+              </div>
+              <div className="ci-arrow">↗</div>
+            </a>
           </div>
-        </motion.div>
+        </div>
+        <div className="contact-right fade d2">
+          <div className="avail-strip">
+            <div className="avail-dot"></div>
+            <div className="avail-text">Currently available for full-time & internship roles</div>
+          </div>
+          <a href="Aswitha_Resume_FS.pdf" download="Aswitha_Resume_FS.pdf" className="resume-card">
+            <div className="resume-icon">📄</div>
+            <div>
+              <div className="resume-title">Download Resume</div>
+              <div className="resume-sub">Aswitha_Resume_FS.pdf · MERN Stack Developer · 2025</div>
+            </div>
+          </a>
+          <div className="social-pair">
+            <a href="https://github.com/aswithaa2011/MERN-AS/tree/main" target="_blank" rel="noreferrer" className="social-card">
+              <svg viewBox="0 0 24 24" fill="currentColor" style={{ width: '16px' }}>
+                <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+              </svg>
+              GitHub
+            </a>
+            <a href="https://www.linkedin.com/in/aswitha-v-76b5013aa/" target="_blank" rel="noreferrer" className="social-card">
+              <svg viewBox="0 0 24 24" fill="currentColor" style={{ width: '16px' }}>
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+              </svg>
+              LinkedIn
+            </a>
+          </div>
+        </div>
       </div>
-    </motion.div>
+    </section>
   );
 }

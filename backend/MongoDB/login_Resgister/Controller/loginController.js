@@ -13,8 +13,7 @@ export const createRegister = async (req, res) => {
 
    const passwordHash = await bcrypt.hash(userPassword, 10);
 
-    const registerData = await loginModel.create({userName,userEmail,userPassword: passwordHash,
-    });
+    const registerData = await loginModel.create({userName,userEmail,userPassword: passwordHash});
     console.log(registerData);
 
     res.status(201).json({ msg: "data inserted", registerData });

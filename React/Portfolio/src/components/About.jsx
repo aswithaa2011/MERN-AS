@@ -1,77 +1,58 @@
-import { motion } from "framer-motion";
-import { User, Target, Coffee, Code2, LayoutTemplate } from "lucide-react";
+import heroImg from "../assets/passphoto.jpeg";
 
 export default function About() {
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: { opacity: 1, transition: { staggerChildren: 0.15 } },
-    exit: { opacity: 0, y: -20, transition: { duration: 0.3 } }
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, x: -30 },
-    visible: { opacity: 1, x: 0, transition: { duration: 0.5 } }
-  };
-
   return (
-    <motion.div
-      variants={containerVariants}
-      initial="hidden"
-      animate="visible"
-      exit="exit"
-      className="min-h-screen pt-32 pb-20 px-6 max-w-6xl mx-auto flex flex-col justify-center"
-    >
-      <div className="mb-12 flex items-center gap-4">
-        <User className="text-indigo-500" size={32} />
-        <h2 className="text-4xl md:text-5xl font-bold">About <span className="text-gradient">Me</span></h2>
+    <section id="about">
+      <div className="section-wrap">
+        <div className="about-sticky fade">
+          <div className="about-photo-frame">
+            <div className="about-photo-internal">
+              <img src={heroImg} alt="Aswitha Vijayakumar"/>
+            </div>
+            <div className="about-photo-overlay">
+              <div className="about-photo-name">Aswitha Vijayakumar</div>
+              <div className="about-photo-sub">MERN Stack Developer</div>
+            </div>
+          </div>
+        </div>
+        <div className="about-right">
+          <div className="section-pill fade">About Me</div>
+          <h2 className="section-heading fade d1">Building the full stack, one layer at a time.</h2>
+          <p className="fade d2">
+            I'm <strong>Aswitha Vijayakumar</strong>, a Full Stack Developer based in Chennai, Tamil Nadu. I started as a frontend developer obsessed with clean React interfaces — and levelled up to building complete, production-grade MERN applications.
+          </p>
+          <p className="fade d2">
+            My flagship project <strong>Glowra Cosmetics</strong> is a full e-commerce platform where I engineered everything: the React storefront, Node.js + Express backend, MongoDB data models, JWT authentication, and protected REST APIs. I think like a product engineer, not just a developer.
+          </p>
+          <p className="fade d3">
+            I care about <strong>clean, maintainable code</strong>, responsive design, and experiences that just work. I bring both technical precision and creative eye to every project I build.
+          </p>
+
+          <div className="exp-card fade d3">
+            <div className="exp-icon">💼</div>
+            <div>
+              <div className="exp-title">Technical Support Executive</div>
+              <div className="exp-co">Selfservit Solutions Pvt Ltd · Chennai</div>
+              <div className="exp-date">Mar 2024 – Aug 2025</div>
+            </div>
+          </div>
+
+          <div className="about-stats fade d4">
+            <div className="stat-card">
+              <span className="stat-num">4+</span>
+              <span className="stat-label">Projects</span>
+            </div>
+            <div className="stat-card">
+              <span className="stat-num">MERN</span>
+              <span className="stat-label">Full Stack</span>
+            </div>
+            <div className="stat-card">
+              <span className="stat-num">78.5%</span>
+              <span className="stat-label">B.Sc. CS</span>
+            </div>
+          </div>
+        </div>
       </div>
-
-      <div className="grid lg:grid-cols-5 gap-12 items-center">
-        {/* Left Col - Graphic / Avatar representation */}
-        <motion.div variants={itemVariants} className="lg:col-span-2 relative flex justify-center">
-          <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full glass-panel border-[8px] border-gray-900 shadow-[0_0_40px_rgba(79,70,229,0.3)] flex items-center justify-center overflow-hidden group">
-            <div className="absolute inset-0 bg-gradient-to-tr from-blue-600/20 to-purple-600/20 group-hover:scale-110 transition-transform duration-700" />
-            <Code2 size={100} className="text-gray-400 group-hover:text-white transition-colors duration-500 relative z-10" />
-            
-            {/* Orbital Rings */}
-            <div className="absolute inset-2 border border-gray-700/50 rounded-full border-dashed animate-[spin_20s_linear_infinite]" />
-            <div className="absolute inset-8 border border-gray-600/30 rounded-full animate-[spin_15s_linear_infinite_reverse]" />
-          </div>
-        </motion.div>
-
-        {/* Right Col - Text */}
-        <motion.div variants={itemVariants} className="lg:col-span-3 space-y-6">
-          <div className="glass-card p-8 relative">
-            <div className="absolute -top-4 -left-4 p-3 bg-indigo-600 rounded-xl shadow-lg shadow-indigo-600/30">
-              <Target className="text-white" size={24} />
-            </div>
-            <h3 className="text-2xl font-bold mb-4 font-outfit">My Journey</h3>
-            <p className="text-gray-300 leading-relaxed text-lg">
-              I am a passionate frontend developer obsessed with creating clean, intuitive user interfaces and butter-smooth experiences. I specialize in building robust web applications using React.js and modern CSS frameworks like Tailwind.
-            </p>
-            <p className="text-gray-300 leading-relaxed text-lg mt-4">
-              My recent flagship project is <strong>Glowra Cosmetics</strong>, a full-featured e-commerce platform built from the ground up. I focused deeply on Context-based authentication, private routing, and a clean product shopping experience to blend aesthetic design with practical functionality.
-            </p>
-          </div>
-
-          <div className="grid sm:grid-cols-2 gap-6">
-            <div className="glass-panel p-6 rounded-2xl border-l-4 border-l-blue-500 flex items-start gap-4">
-              <Coffee className="text-blue-400" size={24} />
-              <div>
-                <h4 className="font-bold text-gray-100">Clean Code</h4>
-                <p className="text-sm text-gray-400 mt-1">Writing maintainable, DRY, and scalable components.</p>
-              </div>
-            </div>
-            <div className="glass-panel p-6 rounded-2xl border-l-4 border-l-purple-500 flex items-start gap-4">
-              <LayoutTemplate className="text-purple-400" size={24} />
-              <div>
-                <h4 className="font-bold text-gray-100">Pixel Perfect Design</h4>
-                <p className="text-sm text-gray-400 mt-1">Transforming designs into flawless interactive realities.</p>
-              </div>
-            </div>
-          </div>
-        </motion.div>
-      </div>
-    </motion.div>
+    </section>
   );
 }
